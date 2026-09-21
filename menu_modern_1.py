@@ -1,3 +1,10 @@
+# Semua Algoritma Kudu punya ini
+def algoritmaKu(plainText: str) -> str:
+    # Kalau udah dibikin fungsinya terus ketik " 3 kali biar bikin autodocstringnya kayak dibawah
+    cipherText = ""
+    return cipherText
+
+
 def jalankan():
     # Judul Program Nanti Diganti
     print("\n--- Algoritma KLASIK 1 ---")
