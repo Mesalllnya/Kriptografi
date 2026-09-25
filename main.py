@@ -13,8 +13,8 @@ def main():
             "\033[1;31mAPLIKASI KRIPTOGRAFI KELOMPOK SANGAR YK \n\tIfsalll, Erlan, Roi, Nahdi \033[0m"
         )
         print("=" * 40)
-        print("1. Klasik 1 (Contoh: Caesar Cipher)\033[0m")
-        print("2. Klasik 2 (Contoh: Vigenere Cipher)")
+        print("1. Klasik 1 (Caesar Cipher)")
+        print("2. Klasik 2 (Vigenere Cipher)")
         print("3. Modern 1 (Contoh: AES)")
         print("4. Modern 2 (Contoh: DES)")
         print("5. Super Enkripsi (Gabungan 4 Algoritma)")
