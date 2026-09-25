@@ -42,8 +42,8 @@ def jalankan():
 
             # 2. Hasil Caesar Cipher digunakan untuk Vignere
             kunci = input("Masukkan kunci (Huruf): ")
-            hasilVigenere = mk2.vegenere_enkripsi(hasilCaesar, kunci)
-            mk2.proses_vegenere_enkripsi(hasilCaesar, kunci)
+            hasilVigenere = mk2.vigenere_enkripsi(hasilCaesar, kunci)
+            mk2.proses_vigenere_enkripsi(hasilCaesar, kunci)
 
             # 3. Hasil Vignere digunakan untuk Modern 1
             hasilRSA = md1.enkripsiRSA(hasilVigenere)
@@ -63,8 +63,8 @@ def jalankan():
 
             # 3. Deskripsi Vigenere
             kunci = input("Masukkan kunci (Huruf): ")
-            hasilVigenere = mk2.vegenere_dekripsi(dekripsiRSA, kunci)
-            mk2.proses_vegenere_dekripsi(teks, kunci)
+            hasilVigenere = mk2.vigenere_dekripsi(dekripsiRSA, kunci)
+            mk2.proses_vigenere_dekripsi(teks, kunci)
 
             # 4. Deskripsi Caesar (Final)
             kunci = input("Masukkan kunci (geser): ")
