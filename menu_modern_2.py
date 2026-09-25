@@ -3,8 +3,9 @@ from Crypto.Cipher import AES
 # AES 128 menggunakan key 16 bytes
 key = b"1234567890abcdef"
 
+
 # Semua Algoritma Kudu punya ini
-def algoritmaKu(plainText: str) -> str:
+def enkripsiAES(plainText: str) -> str:
     """
     Melakukan enkripsi plaintext menggunakan AES-128.
 
@@ -41,6 +42,7 @@ def algoritmaKu(plainText: str) -> str:
 
     return cipherText
 
+
 def dekripsiAES(cipherText: str) -> str:
     """
     Melakukan dekripsi ciphertext menggunakan AES-128.
@@ -56,7 +58,7 @@ def dekripsiAES(cipherText: str) -> str:
     print("[1] Ciphertext Hex :", cipherText)
 
     try:
-        #Konversi heksadesimal menjadi bytes
+        # Konversi heksadesimal menjadi bytes
         encrypted = bytes.fromhex(cipherText)
     except ValueError:
         print("[ERROR] Ciphertext harus berupa heksadesimal!")
@@ -90,6 +92,7 @@ def dekripsiAES(cipherText: str) -> str:
     print("[5] Plaintext:", plaintext)
     return plaintext
 
+
 def jalankan():
     # Judul Program Nanti Diganti
     print("\n--- Algoritma Modern 2 (AES-128) ---")
@@ -108,7 +111,7 @@ def jalankan():
 
     if aksi == "1":
         # AES ENGINE ENKRIPSI + TAMPILAN PROSES
-        cipherText = algoritmaKu(teks)
+        cipherText = enkripsiAES(teks)
         print(f"\n✅ Hasil Enkripsi: {cipherText}")
 
     elif aksi == "2":
@@ -122,6 +125,7 @@ def jalankan():
         print("Aksi tidak dikenal. Batal.")
 
     input("\nTekan Enter untuk kembali ke Menu Utama...")
+
 
 if __name__ == "__main__":
     jalankan()

@@ -1,5 +1,5 @@
 # Semua Algoritma Kudu punya ini
-def algoritmaKu(plainText: str) -> str:
+def enkripsiRSA(plainText: str) -> str:
     # Kalau udah dibikin fungsinya terus ketik " 3 kali biar bikin autodocstringnya kayak dibawah
     """
     Melakukan enkripsi plaintext menggunakan algoritma RSA.
@@ -17,7 +17,7 @@ def algoritmaKu(plainText: str) -> str:
     print("\nProses RSA Enkripsi\n")
     print("[1]. Plaintext : ", plainText)
 
-    #konversi plaintext menjadi byte
+    # konversi plaintext menjadi byte
     plaintext_bytes = plainText.encode("utf-8")
 
     print("[2]. Konversi ke nilai byte: ", list(plaintext_bytes))
@@ -30,10 +30,7 @@ def algoritmaKu(plainText: str) -> str:
         cipher = pow(byte, e, n)
         hasil.append(str(cipher))
 
-        print(
-            f"  Karakter ke-{ i + 1}: "
-            f"M = {byte} -> C = {cipher}"
-        )
+        print(f"  Karakter ke-{ i + 1}: " f"M = {byte} -> C = {cipher}")
 
     # Ciphertextt berupa angka yang dipisahkan spasi
     cipherText = " ".join(hasil)
@@ -41,6 +38,7 @@ def algoritmaKu(plainText: str) -> str:
     print("[4] Ciphertext : ", cipherText)
 
     return cipherText
+
 
 def dekripsiRSA(cipherText: str) -> str:
     """
@@ -57,9 +55,7 @@ def dekripsiRSA(cipherText: str) -> str:
     print("[1] Ciphertext : ", cipherText)
 
     try:
-        cipher_blocks = [
-            int(x) for x in cipherText.split()
-        ]
+        cipher_blocks = [int(x) for x in cipherText.split()]
     except ValueError:
         print("[ERROR] Ciphertext harus berupa angka!")
         return ""
@@ -73,10 +69,7 @@ def dekripsiRSA(cipherText: str) -> str:
         plain = pow(cipher, d, n)
         hasil.append(plain)
 
-        print(
-            f"    Blok ke-{i + 1}: "
-            f"C = {cipher} → M = {plain}"
-        )
+        print(f"    Blok ke-{i + 1}: " f"C = {cipher} → M = {plain}")
 
     # Konversi kembali angka menjadi karakter
     plaintext = bytes(hasil).decode("utf-8")
@@ -86,7 +79,8 @@ def dekripsiRSA(cipherText: str) -> str:
 
     return plaintext
 
-# Kunci RSA 
+
+# Kunci RSA
 
 # Bil Prima
 p = 61
@@ -103,6 +97,7 @@ e = 17
 
 # Private exponent
 d = pow(e, -1, phi)
+
 
 def jalankan():
     # Judul Program Nanti Diganti
@@ -123,7 +118,7 @@ def jalankan():
     if aksi == "1":
         # RSA Engine Enkripsi + Proses
 
-        cipherText = algoritmaKu(teks)
+        cipherText = enkripsiRSA(teks)
         print(f"\n✅ Hasil Enkripsi: {cipherText}")
 
     elif aksi == "2":
@@ -138,6 +133,7 @@ def jalankan():
         print("Aksi tidak dikenal. Batal.")
 
     input("\nTekan Enter untuk kembali ke Menu Utama...")
+
 
 if __name__ == "__main__":
     jalankan()

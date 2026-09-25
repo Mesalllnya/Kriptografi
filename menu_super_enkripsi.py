@@ -1,5 +1,7 @@
 import menu_klasik_1 as mk1
 import menu_klasik_2 as mk2
+import menu_modern_1 as md1
+import menu_modern_2 as md2
 
 
 # Semua Algoritma Kudu punya ini
@@ -44,22 +46,24 @@ def jalankan():
             mk2.proses_vegenere_enkripsi(hasilCaesar, kunci)
 
             # 3. Hasil Vignere digunakan untuk Modern 1
+            hasilRSA = md1.enkripsiRSA(hasilVigenere)
 
             # 4. Hasil modern 1 digunakan untuk Modern 2
+            hasilAES = md2.enkripsiAES(hasilRSA)
 
             # Print Hasil Enkripsi
-            print("Hasil Enkripsi: ", hasilVigenere)
+            print("Hasil Enkripsi: ", hasilAES)
 
         elif aksi == "2":
             # 1. Deskripsi dimulai dari modern 2
+            dekripsiAES = md2.dekripsiAES(teks)
 
             # 2. Deskripsi Modern 1
-            hasilModern1 = "apalah"
+            dekripsiRSA = md1.dekripsiRSA(dekripsiAES)
 
             # 3. Deskripsi Vigenere
-            # FIXME - Sementara kuganti teks biar bisa ngetest
             kunci = input("Masukkan kunci (Huruf): ")
-            hasilVigenere = mk2.vegenere_dekripsi(teks, kunci)
+            hasilVigenere = mk2.vegenere_dekripsi(dekripsiRSA, kunci)
             mk2.proses_vegenere_dekripsi(teks, kunci)
 
             # 4. Deskripsi Caesar (Final)
