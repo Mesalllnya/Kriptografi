@@ -64,7 +64,7 @@ def jalankan():
             # 3. Deskripsi Vigenere
             kunci = input("Masukkan kunci (Huruf): ")
             hasilVigenere = mk2.vigenere_dekripsi(dekripsiRSA, kunci)
-            mk2.proses_vigenere_dekripsi(teks, kunci)
+            mk2.proses_vigenere_dekripsi(dekripsiRSA, kunci)
 
             # 4. Deskripsi Caesar (Final)
             kunci = input("Masukkan kunci (geser): ")
@@ -75,7 +75,8 @@ def jalankan():
             mk1.proses_caesar_dekripsi(hasilVigenere, kunci)
 
             # Print Hasil Deskripsi
-            print("Hasil Deskripsi: ", hasilVigenere)
+            # Print Hasil Deskripsi
+            print("Hasil Deskripsi: ", hasilCaesar)
 
         else:
             print("Aksi tidak dikenal. Batal.")

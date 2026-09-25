@@ -127,7 +127,7 @@ def jalankan():
         plainText = dekripsiRSA(teks)
 
         if plainText != "":
-            print(f"\n✅ Hasil Dekripsi: {teks}_DECRYPTED_KLASIK1")
+            print(f"\n✅ Hasil Dekripsi: {plainText}")
 
     else:
         print("Aksi tidak dikenal. Batal.")
