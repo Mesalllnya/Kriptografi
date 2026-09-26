@@ -18,7 +18,7 @@ Aplikasi ini menyediakan 5 (lima) menu utama yang masing-masing merepresentasika
 
 ## Fitur
 
-- Enkripsi dan dekripsi untuk masing-masing algoritma pada menu 1-4
+- Enkripsi dan dekripsi untuk masing-masing algoritma pada menu 1-5
 - Tampilan detail tahapan proses (log perhitungan) pada setiap operasi, agar mudah ditelusuri dan diverifikasi
 - Validasi input (teks kosong, format kunci, format ciphertext) pada setiap menu
 - Menu klasik (Caesar Cipher) dilengkapi fitur brute force dekripsi untuk kasus kunci tidak diketahui
@@ -75,4 +75,4 @@ Menggabungkan keempat algoritma di atas secara berurutan (Caesar -> Vigenere -> 
 
 ## Mata Kuliah
 
-Kriptografi
+Kriptografi (IF-D)
